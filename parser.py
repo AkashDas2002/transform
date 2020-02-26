@@ -30,7 +30,7 @@ The file follows the following format:
                takes 1 argument (file name)
          quit: end parsing
 See the file script for an example of the file format
-"""
+""" 
 def parse_file( fname, points, transform, screen, color ):
     file = open(fname, 'r')
     commands = []
