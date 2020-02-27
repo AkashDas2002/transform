@@ -1,0 +1,33 @@
+line
+5 0 0 15 0 0
+line
+20 0 7 15 0 14
+line
+5 0 14 0 0 7
+display
+ident
+scale
+2 2 2
+apply
+display
+ident
+move
+100 100 0
+apply
+display
+ident
+rotate
+z 20
+rotate
+x 20
+rotate
+y 20
+apply
+display
+ident
+rotate
+y 20
+apply
+display
+save
+pic.png

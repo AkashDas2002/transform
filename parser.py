@@ -38,7 +38,7 @@ def parse_file( fname, points, transform, screen, color ):
     commands = []
     for line in file:
         commands.append(line[:-1])
-    print(commands)
+    # print(commands)
     i = 0
     while i < len(commands):
         if commands[i] == "line":
@@ -59,7 +59,7 @@ def parse_file( fname, points, transform, screen, color ):
             a = [int(num) for num in alist]
             newmat = make_scale(a[0],a[1],a[2])
             matrix_mult(newmat, transform)
-            i += 2 
+            i += 2
         elif commands[i] == "move":
             alist = commands[i+1].split()
             a = [int(num) for num in alist]
