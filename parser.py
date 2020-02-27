@@ -2,6 +2,8 @@ from display import *
 from matrix import *
 from draw import *
 
+import math
+
 """
 Goes through the file named filename and performs all of the actions listed in that file.
 The file follows the following format:
@@ -50,7 +52,7 @@ def parse_file( fname, points, transform, screen, color ):
             display(screen)
             i += 1
         elif commands[i] == "ident":
-            ident(matrix)
+            ident(transform)
             i += 1
         elif commands[i] == "scale":
             alist = commands[i+1].split()
@@ -63,4 +65,23 @@ def parse_file( fname, points, transform, screen, color ):
             a = [int(num) for num in alist]
             newmat = make_translate(a[0],a[1],a[2])
             matrix_mult(newmat, transform)
+            i += 2
+        elif commands[i] == "rotate":
+            alist = commands[i+1].split()
+            if alist[0] == "x":
+                newmat = make_rotX(int(alist[1]) * math.pi / 180)
+            elif alist[0] == "y":
+                newmat = make_rotY(int(alist[1]) * math.pi / 180)
+            else:
+                newmat = make_rotZ(int(alist[1]) * math.pi / 180)
+            matrix_mult(newmat, transform)
+            i += 2
+        elif commands[i] == "apply":
+            matrix_mult(transform, points)
+            i += 1
+        else:
+            screen = new_screen()
+            draw_lines(points, screen, color)
+            display(screen)
+            save_extension(screen, commands[i+1])
             i += 2
