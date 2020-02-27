@@ -64,7 +64,7 @@ def ident( matrix ):
                 matrix[c][r] = 1
             else:
                 matrix[c][r] = 0
-
+ 
 #multiply m1 by m2, modifying m2 to be the product
 #m1 * m2 -> m2
 def matrix_mult( m1, m2 ):
