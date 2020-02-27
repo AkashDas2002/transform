@@ -30,17 +30,20 @@ def make_rotX( theta ):
     rotate = [[1,0,0,0],[0, math.cos(theta), math.sin(theta),0]]
     rotate.append([0,-1 * math.sin(theta), math.cos(theta),0])
     rotate.append([0,0,0,1])
+    return rotate
 
 def make_rotY( theta ):
     rotate = [[math.cos(theta), 0, -1 * math.sin(theta),0],[0,1,0,0]]
     rotate.append([math.sin(theta), 0, math.cos(theta),0])
     rotate.append([0,0,0,1])
+    return rotate
 
 def make_rotZ( theta ):
     rotate = [[math.cos(theta),math.sin(theta),0,0]]
     rotate.append([-1 * math.sin(theta), math.cos(theta),0,0])
     rotate.append([0,0,1,0])
     rotate.append([0,0,0,1])
+    return rotate
 
 #print the matrix such that it looks like
 #the template in the top comment
@@ -77,6 +80,7 @@ def matrix_mult( m1, m2 ):
                             m1[2][r] * tmp[2] +
                             m1[3][r] * tmp[3])
         point+= 1
+
 
 
 def new_matrix(rows = 4, cols = 4):
