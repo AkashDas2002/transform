@@ -1,32 +1,36 @@
 line
-5 0 0 15 0 0
+0 0 0 6 0 0
 line
-20 0 7 15 0 14
+6 0 0 6 0 6
 line
-5 0 14 0 0 7
-display
-ident
-scale
-2 2 2
-apply
-display
+6 0 6 0 0 6
+line
+0 0 6 0 0 0
+line
+0 0 0 3 5 3
+line
+6 0 0 3 5 3
+line
+6 0 6 3 5 3
+line
+0 0 6 3 5 3
+line
+0 0 0 3 -5 3
+line
+6 0 0 3 -5 3
+line
+6 0 6 3 -5 3
+line
+0 0 6 3 -5 3
 ident
 move
-100 100 0
-apply
-display
-ident
+7 22 20
+scale
+15 15 15
 rotate
-z 20
+y 20
 rotate
 x 20
-rotate
-y 20
-apply
-display
-ident
-rotate
-y 20
 apply
 display
 save
